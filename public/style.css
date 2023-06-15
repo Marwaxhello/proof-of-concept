@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: montserrat;
   list-style: none;
   text-decoration: none;
 }
@@ -9,12 +8,10 @@
 /* -----CUSTOM PROPERTIES----- */
 
 :root {
-  --yellow: #f4eb34;
-  --Aqua-green: #73aea6;
+  --Geel: #ffc200;
   --Black: #000000;
-  --Grey: #fafafa;
-  --Dark-grey: #bcb7b7;
-  --Lightblue: #daeeee;
-  --Darkblue: #152a42;
-  --LightGreen: #d5edee;
+  --Wit: #ffff;
+  --Donker-grijs: #404040;
+  --Licht-grijs: #BFBFBF;
 }
+
