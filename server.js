@@ -2,6 +2,7 @@ import express from "express";
 import * as path from "path";
 import fetch from "node-fetch";
 
+
 const server = express();
 
 server.set("view engine", "ejs");
