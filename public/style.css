@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  font-family: montserrat;
   list-style: none;
   text-decoration: none;
 }
@@ -15,3 +16,102 @@
   --Licht-grijs: #BFBFBF;
 }
 
+/* -----BANNER----- */
+
+.banner {
+  background-color: var(--Black);
+  padding: 1em;
+  width: 100%;
+  position: relative;
+  height: 2.8rem;
+  font-size: 0.8rem;
+}
+
+
+.verzending_banner {
+  text-align: right;
+  color: var(--Wit);
+}
+
+/* -----LOGO----- */
+
+.fivespark-logo {
+  margin: 1em;
+  margin-left: 1em;
+  width: 8em;
+}
+
+/* -----MENU/NAV----- */
+
+nav {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  box-shadow: -1px 0 4px rgba(14, 55, 63, 0.15);
+}
+
+nav ul {
+  list-style-type: none;
+  display: none;
+  color: var(--Geel);
+}
+
+nav li:active {
+  color: var(--Geel);
+}
+
+
+/* -----FOOTER----- */
+
+footer {
+    background-color: var(--Black);
+}
+
+.ul_footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  font-size: 13px;
+  margin: 0.5em;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  color: var(--Wit);
+}
+
+.footer_ul {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: left;
+  margin-bottom: 2em;
+}
+
+.first-color {
+  color: var(--Geel);
+  font-size: 17px;
+  font-weight: 900;
+}
+
+
+@media screen and (min-width: 800px) {
+  .footer_ul {
+    display: flex;
+    margin: 2em;
+    justify-content: center;
+  }
+ 
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 4em;
+    font-family: montserrat, sans-serif;
+    margin-top: 60px;
+    margin-left: 1em;
+    font-style: var(--Black);
+    z-index: 1;
+  }
+  .dropbtn {
+    display: none;
+  }
+}
