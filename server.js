@@ -3,6 +3,8 @@ import * as path from "path";
 import fetch from "node-fetch";
 
 const server = express();
+// const url =
+//   "https://api.fivespark.com/docs/?access_token=-xWJUqFTn3NSpbRIMxytzqlCVs8WF8rLB";
 
 server.set("view engine", "ejs");
 server.set("views", "./views");
@@ -45,4 +47,3 @@ async function dataFetch(url) {
 
 //   return data;
 // }
-
