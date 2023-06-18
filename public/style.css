@@ -14,6 +14,9 @@
   --Wit: #ffff;
   --Donker-grijs: #404040;
   --Licht-grijs: #bfbfbf;
+  --small-screen: 600px;
+  --medium-screen: 900px;
+  --large-screen: 1200px;
 }
 
 /* -----BANNER----- */
@@ -39,57 +42,6 @@
   margin-left: 1em;
   width: 8em;
 }
-
-/* -----MENU/NAV----- */
-
-a {
-  text-decoration: none;
-  color: var(--Black);
-}
-
-a:hover {
-  color: var(--Geel);
-  transition: 0.2s;
-}
-
-button > a {
-  color: var(--Geel);
-}
-
-button > a:hover {
-  color: white;
-}
-
-nav {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  box-shadow: -1px 0 4px rgba(14, 55, 63, 0.15);
-}
-
-nav ul {
-  list-style-type: none;
-  display: none;
-  color: var(--Geel);
-}
-
-nav li:active {
-  color: var(--Geel);
-}
-
-/* -----NAV MOBILE DROPDOWN----- */
-
-/* .hamburger-menu-main .hamburger-menu {
-    background-color: #ffc100;
-    box-shadow: 0 10px 15px 0 rgba(0,0,0,.1);
-    display: none;
-    position: absolute;
-    right: 0;
-    top: calc(100% + 37px);
-    width: 411px;
-    z-index: 66; */
 
 /* -----FOOTER----- */
 
@@ -144,19 +96,26 @@ footer {
 
 /* -----ABONNEMENT----- */
 
-article {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+section.abonnementen {
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  /* display: grid; */
+  /* grid-template-columns: repeat(3, 1fr); */
   justify-items: center;
 }
 
-.abonnementen {
+.abonnement {
   margin-bottom: 3rem;
   margin-top: 2.5em;
   border: 2px solid var(--Black);
   padding: 1rem;
   position: relative;
   width: 19rem;
+  height: fit-content;
 }
 
 .gele-kader {
@@ -194,7 +153,7 @@ h3 {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .title-page {
     font-size: 30px;
   }
@@ -204,10 +163,11 @@ h3 {
     /* margin-top: -1.5em; */
   }
 
-  article {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    justify-items: center;
+  section.abonnementen {
+    border: 1px solid blue;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -279,4 +239,122 @@ p {
   margin-left: 1em;
   margin-bottom: 2em;
   /* font-weight: bold */
+}
+
+/* -----NAV----- */
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--Wit);
+  box-shadow: -1px 0 4px rgba(14, 55, 63, 0.15);
+  color: var(--Black);
+  height: 50px;
+  padding: 2em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: var(--Geel);
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: "";
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: "";
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 109px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
 }
