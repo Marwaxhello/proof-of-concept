@@ -1,24 +1,26 @@
 <%- include('./partials/head.ejs') %>
 
-<h2 class="title-page">Fivespark is een full service providert</h2>
+<!-- <h2 class="title-page">Fivespark is een full service providert</h2> -->
+<% selectedContracts.forEach(contract => { %>
+<p>pakket</p>
+<% }) %>
 
-<h3>Kies jouw abonnement</h3>
+<h3>Kies jouw pakket</h3>
+
 <% activities.forEach(function(item) { %>
-<p>Activity <%= item.id %></p>
+<p>Activity <%= item.title %></p>
 <p>minutes: <%= item.minutes %></p>
 <p>date_created: <%= item.date_created %></p>
 <% }); %>
+
 <section class="abonnementen">
   <div class="abonnement">
     <div class="gele-kader"><h3 class="soort">Standard</h3></div>
-    <img
-      class="article-img"
-      src="/Fivespark-book.webp"
-      alt="Pinda in 6 stappen"
-    />
+
     <h3>...</h3>
     <div class="homepage-btn">
       <button class="test-btn"><h4>Bekijk abonnement</h4></button>
+      <button class="test-btn"><h4>Bekijk voordelen</h4></button>
     </div>
   </div>
 
@@ -29,16 +31,18 @@
       <button class="test-btn">
         <h4>Bekijk abonnement</h4>
       </button>
+      <button class="test-btn"><h4>Bekijk voordelen</h4></button>
     </div>
   </div>
 
   <div class="abonnement">
-    <div class="gele-kader"><h3 class="soort">Premium pro</h3></div>
+    <div class="gele-kader"><h3 class="soort">Complete</h3></div>
     <h3>€ 9.95</h3>
     <div class="homepage-btn">
       <button class="test-btn">
         <h4>Bekijk abonnement</h4>
       </button>
+      <button class="test-btn"><h4>Bekijk voordelen</h4></button>
     </div>
   </div>
 </section>

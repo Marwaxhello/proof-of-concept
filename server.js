@@ -20,13 +20,22 @@ server.get("/", async (req, res) => {
     const itemUrl = url + "/items/activities";
     const { data } = await dataFetch(itemUrl);
 
-    res.render("index", { activities: data });
+    const serviceContracts = await dataFetch(
+      "https://api.fivespark.com/items/service_contracts"
+    );
+
+    const selectedContracts = serviceContracts.data.filter(
+      (contract) => contract.id === 3 || contract.id === 4 || contract.id === 7
+    );
+
+    console.log(selectedContracts)
+
+    res.render("index", { activities: data, selectedContracts });
   } catch (error) {
     console.error(error);
     res.status(500).send("An error occurred");
   }
 });
-
 
 async function dataFetch(url) {
   const data = await fetch(url, {

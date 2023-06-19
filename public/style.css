@@ -75,23 +75,9 @@ footer {
 @media screen and (min-width: 800px) {
   .footer_ul {
     display: flex;
-    margin: 2em;
+    margin-top: 2em;
     justify-content: center;
   }
-
-  nav ul {
-    list-style-type: none;
-    display: flex;
-    gap: 4em;
-    font-family: montserrat, sans-serif;
-    margin-top: 60px;
-    margin-left: 1em;
-    font-style: var(--Black);
-    z-index: 1;
-  }
-  /* .dropbtn {
-    display: none;
-  } */
 }
 
 /* -----ABONNEMENT----- */
@@ -103,15 +89,14 @@ section.abonnementen {
   justify-content: space-between;
   /* border: 1px solid red; */
   margin: 0 auto;
-  /* display: grid; */
-  /* grid-template-columns: repeat(3, 1fr); */
   justify-items: center;
 }
 
 .abonnement {
   margin-bottom: 3rem;
   margin-top: 2.5em;
-  border: 2px solid var(--Black);
+  border: 2px solid var(--Licht-grijs);
+  box-shadow: -1px 0 4px rgba(14, 55, 63, 0.15);
   padding: 1rem;
   position: relative;
   width: 19rem;
@@ -137,11 +122,20 @@ section.abonnementen {
   margin-top: -0.5em;
 }
 
-.article-img {
+/* .article-img {
   width: 15rem;
   height: auto;
   margin-top: 1em;
 }
+
+.main-img {
+  position: absolute;
+  left: 0;
+  top: 4;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(68, 86, 102, 50%);
+} */
 
 h3 {
   padding: 0em;
@@ -164,7 +158,6 @@ h3 {
   }
 
   section.abonnementen {
-    border: 1px solid blue;
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -241,7 +234,7 @@ p {
   /* font-weight: bold */
 }
 
-/* -----NAV----- */
+/* -----NAV/MENU----- */
 
 .top-nav {
   display: flex;
