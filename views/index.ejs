@@ -1,17 +1,67 @@
 <%- include('./partials/head.ejs') %>
 
+<img
+  class="main-img"
+  src="https://fivespark.com/hs-fs/hubfs/Stock%20foto%20s/Homepage%20banner-1-2.png?width=1920&amp;name=Homepage%20banner-1-2.png"
+  alt="banner Image"
+  srcset="
+    https://fivespark.com/hs-fs/hubfs/Stock%20foto%20s/Homepage%20banner-1-2.png?width=960&amp;name=Homepage%20banner-1-2.png   960w,
+    https://fivespark.com/hs-fs/hubfs/Stock%20foto%20s/Homepage%20banner-1-2.png?width=1920&amp;name=Homepage%20banner-1-2.png 1920w,
+    https://fivespark.com/hs-fs/hubfs/Stock%20foto%20s/Homepage%20banner-1-2.png?width=2880&amp;name=Homepage%20banner-1-2.png 2880w,
+    https://fivespark.com/hs-fs/hubfs/Stock%20foto%20s/Homepage%20banner-1-2.png?width=3840&amp;name=Homepage%20banner-1-2.png 3840w,
+    https://fivespark.com/hs-fs/hubfs/Stock%20foto%20s/Homepage%20banner-1-2.png?width=4800&amp;name=Homepage%20banner-1-2.png 4800w,
+    https://fivespark.com/hs-fs/hubfs/Stock%20foto%20s/Homepage%20banner-1-2.png?width=5760&amp;name=Homepage%20banner-1-2.png 5760w
+  "
+  sizes="(max-width: 1920px) 100vw, 1920px"
+/>
+
+<% contract_basic.forEach(activity => { %> <%
+activityTranslations.data.forEach(activityTranslation => { %> <% if
+(activity.activities_id === activityTranslation.id &&
+activityTranslation.languages_code === language) { %>
+<tr>
+  <td><%- activityTranslation.title %></td>
+  <td>Tooltip</td>
+  <% if (activity.charged_minutes === 0) { %>
+  <td>Inbegrepen</td>
+  <% } else { %>
+  <td>Niet inbegrepen</td>
+  <% } %>
+</tr>
+<% } %> <% }) %> <% }) %>
+
 <!-- <h2 class="title-page">Fivespark is een full service providert</h2> -->
-<% selectedContracts.forEach(contract => { %>
-<p>pakket</p>
-<% }) %>
+<!-- <% selectedContracts.forEach(contract => { %>
+<p>mmt</p>
+<% }) %> -->
 
-<h3>Kies jouw pakket</h3>
+<!-- <% selectedContracts.forEach((item) => { %>
 
-<% activities.forEach(function(item) { %>
-<p>Activity <%= item.title %></p>
-<p>minutes: <%= item.minutes %></p>
-<p>date_created: <%= item.date_created %></p>
-<% }); %>
+  <h2>Item ID: <%= item.id %></h2>
+  <p>Cost Price: <%= item.cost_price %></p>
+  <p>List Price: <%= item.list_price %></p>
+  <h3>Activities:</h3>
+
+  <ul>
+
+    <%# item.activities.forEach((activity) => { %>
+
+      <li><%# activity %></li>
+
+    <%# }); %>
+
+  </ul>
+<%# }); %> -->
+
+<!-- <h3>Kies jouw pakket</h3> -->
+
+<!-- <%# activities.forEach(function(item) { %>
+
+<p>Activity <%# item.title %></p>
+<p>minutes: <%# item.minutes %></p>
+<p>date_created: <%# item.date_created %></p>
+
+<% }); %> -->
 
 <section class="abonnementen">
   <div class="abonnement">
@@ -20,7 +70,7 @@
     <h3>...</h3>
     <div class="homepage-btn">
       <button class="test-btn"><h4>Bekijk abonnement</h4></button>
-      <button class="test-btn"><h4>Bekijk voordelen</h4></button>
+      <h4>Bekijk voordelen</h4>
     </div>
   </div>
 
@@ -29,9 +79,9 @@
     <h3>...</h3>
     <div class="homepage-btn">
       <button class="test-btn">
-        <h4>Bekijk abonnement</h4>
+        <h4 class="bekijk-abonnement">Bekijk abonnement</h4>
       </button>
-      <button class="test-btn"><h4>Bekijk voordelen</h4></button>
+      <h4>Bekijk voordelen</h4>
     </div>
   </div>
 
@@ -42,7 +92,7 @@
       <button class="test-btn">
         <h4>Bekijk abonnement</h4>
       </button>
-      <button class="test-btn"><h4>Bekijk voordelen</h4></button>
+      <h4>Bekijk voordelen</h4>
     </div>
   </div>
 </section>

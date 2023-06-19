@@ -126,16 +126,15 @@ section.abonnementen {
   width: 15rem;
   height: auto;
   margin-top: 1em;
-}
+} */
 
 .main-img {
-  position: absolute;
   left: 0;
   top: 4;
   width: 100%;
   height: 100%;
   background-color: rgba(68, 86, 102, 50%);
-} */
+}
 
 h3 {
   padding: 0em;
@@ -233,6 +232,7 @@ p {
   margin-bottom: 2em;
   /* font-weight: bold */
 }
+
 
 /* -----NAV/MENU----- */
 
