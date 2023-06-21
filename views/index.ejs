@@ -13,73 +13,30 @@
     https://fivespark.com/hs-fs/hubfs/Stock%20foto%20s/Homepage%20banner-1-2.png?width=5760&amp;name=Homepage%20banner-1-2.png 5760w
   "
   sizes="(max-width: 1920px) 100vw, 1920px"
+  loading="lazy"
 />
 
-<!-- <% contract_basic.forEach(activity => { %> <%
-activityTranslations.data.forEach(activityTranslation => { %> <% if
-(activity.activities_id === activityTranslation.id &&
-activityTranslation.languages_code === language) { %>
-<tr>
-  <td><%- activityTranslation.title %></td>
-  <td>Tooltip</td>
-  <% if (activity.charged_minutes === 0) { %>
-  <td>Inbegrepen</td>
-  <% } else { %>
-  <td>Niet inbegrepen</td>
-  <% } %>
-</tr>
-<% } %> <% }) %> <% }) %> -->
 
-<!-- <h2 class="title-page">Fivespark is een full service providert</h2> -->
-<!-- <% selectedContracts.forEach(contract => { %>
-<p>mmt</p>
-<% }) %> -->
 
-<!-- <% selectedContracts.forEach((item) => { %>
+<h1 class="title-page">Managed Services - Digitale Werkplek </h1>
 
-  <h2>Item ID: <%= item.id %></h2>
-  <p>Cost Price: <%= item.cost_price %></p>
-  <p>List Price: <%= item.list_price %></p>
-  <h3>Activities:</h3>
+<p class="text-onder-head">Met de Digitale Werkplek nemen wij je werkzaamheden uit handen en zorgen ervoor dat je werknemers op 
+ieder moment veilig en optimaal kunnen werken.</p>
 
-  <ul>
-
-    <%# item.activities.forEach((activity) => { %>
-
-      <li><%# activity %></li>
-
-    <%# }); %>
-
-  </ul>
-<%# }); %> -->
-
-<!-- <h3>Kies jouw pakket</h3> -->
-
-<!-- <%# activities.forEach(function(item) { %>
-
-<p>Activity <%# item.title %></p>
-<p>minutes: <%# item.minutes %></p>
-<p>date_created: <%# item.date_created %></p>
-
-<% }); %> -->
 
 <section class="abonnementen">
   <div class="abonnement">
     <div class="gele-kader"><h3 class="soort">Standard</h3></div>
 
-    <h3>...</h3>
-    <div class="homepage-btn">
-      <button class="test-btn"><h4>Bekijk abonnement</h4></button>
-      <h4>Bekijk voordelen</h4>
-
+    <h3>€ 9.00</h3>
+      
       <!-- BASIC ABONNEMENT INFO -->
       <div class="table-responsive">
         <table class="table table-primary">
           <thead>
             <tr>
-              <th scope="col">Activiteit</th>
-              <th scope="col">---</th>
-              <th scope="col">---</th>
+              <th class="activities-head" scope="col">Activiteiten</th>
+            
             </tr>
           </thead>
 
@@ -89,8 +46,8 @@ activityTranslation.languages_code === language) { %>
             (activity.activities_id === activityTranslation.activities_id &&
             activityTranslation.languages_code === language) { %>
             <tr>
-              <td><%- activityTranslation.title %></td>
-              <td>Tooltip</td>
+              <td><p class="activities"><%- activityTranslation.title %></p></td>
+             
 
               <% if (activity.charged_minutes === 0) { %>
 
@@ -116,36 +73,35 @@ activityTranslation.languages_code === language) { %>
           </tbody>
         </table>
       </div>
+
+       <div class="homepage-btn">
+      <button class="test-btn"><h4>Kies abonnement</h4></button>
     </div>
   </div>
 
+  
+
   <div class="abonnement">
     <div class="gele-kader"><h3 class="soort">Premium</h3></div>
-    <h3>...</h3>
-
-    <div class="homepage-btn">
-      <button class="test-btn">
-        <h4 class="bekijk-abonnement">Bekijk abonnement</h4>
-      </button>
-      <h4>Bekijk voordelen</h4>
+     <h3>€ 49.00</h3>
+     
 
       <!-- PREMIUM ABONNEMENT INFO -->
       <div class="table-responsive">
         <table class="table table-primary">
           <thead>
             <tr>
-              <th scope="col">Activiteit</th>
-              <th scope="col">---</th>
-              <th scope="col">---</th>
+              <th class="activities-head" scope="col">Activiteiten</th>
+           
             </tr>
           </thead>
           <tbody>
             <% contract_complete.forEach(activity => { %> <%
             activityTranslations.data.forEach(activityTranslation => { %> <% if
-            (activity.activities_id === activityTranslation.id) { %>
+            (activity.activities_id === activityTranslation.activities_id) { %>
             <tr class="">
-              <td><%- activityTranslation.title %></td>
-              <td>Tooltip</td>
+              <td><p class="activities"><%- activityTranslation.title %></p></td>
+             
               <% if (activity.charged_minutes === 0) { %>
               <td>
                 <img
@@ -166,36 +122,40 @@ activityTranslation.languages_code === language) { %>
           </tbody>
         </table>
       </div>
+
+    <div class="homepage-btn">
+      <button class="test-btn">
+        <h4 class="bekijk-abonnement">Kies abonnement</h4>
+      </button>
+
     </div>
   </div>
 
+
+  
   <div class="abonnement">
     <div class="gele-kader"><h3 class="soort">Complete</h3></div>
-    <h3>€ 9.95</h3>
-    <div class="homepage-btn">
-      <button class="test-btn">
-        <h4>Bekijk abonnement</h4>
-      </button>
-      <h4>Bekijk voordelen</h4>
+    <h3>€ 99.00</h3>
+
+      
 
       <!-- COMPLETE ABONNEMENT INFO -->
 		<div class="table-responsive">
 			<table class="table table-primary">
 				<thead>
 					<tr>
-						<th scope="col">Activiteit</th>
-						<th scope="col">---</th>
-						<th scope="col">---</th>
+						<th class="activities-head" scope="col">Activiteiten</th>
+						
 					</tr>
 				</thead>
 		<tbody>
 		  <% contract_premium.forEach(activity => { %>
 			<% activityTranslations.data.forEach(activityTranslation => { %>
-			<% if (activity.activities_id === activityTranslation.id) { %>
+			<% if (activity.activities_id === activityTranslation.activities_id) { %>
 				<tr class="">
 
-				<td><%- activityTranslation.title %></td>
-				<td>Tooltip</td>
+				<td><p class="activities"><%- activityTranslation.title %></p></td>
+				
 
                                     
 				<% if (activity.charged_minutes === 0) { %>
@@ -212,6 +172,12 @@ activityTranslation.languages_code === language) { %>
 		</tbody>
 		</table>
 		</div>
+
+     <div class="homepage-btn">
+      <button class="test-btn">
+        <h4>Kies abonnement</h4>
+      </button>
+
     </section>
 </div>
  </div>
