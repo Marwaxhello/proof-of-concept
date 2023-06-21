@@ -1,22 +1,31 @@
 <%- include('./partials/head.ejs') %>
 
-<img
-  class="main-img"
-  src="https://fivespark.com/hs-fs/hubfs/Stock%20foto%20s/Homepage%20banner-1-2.png?width=1920&amp;name=Homepage%20banner-1-2.png"
-  alt="banner Image"
-  srcset="
-    https://fivespark.com/hs-fs/hubfs/Stock%20foto%20s/Homepage%20banner-1-2.png?width=960&amp;name=Homepage%20banner-1-2.png   960w,
-    https://fivespark.com/hs-fs/hubfs/Stock%20foto%20s/Homepage%20banner-1-2.png?width=1920&amp;name=Homepage%20banner-1-2.png 1920w,
-    https://fivespark.com/hs-fs/hubfs/Stock%20foto%20s/Homepage%20banner-1-2.png?width=2880&amp;name=Homepage%20banner-1-2.png 2880w,
-    https://fivespark.com/hs-fs/hubfs/Stock%20foto%20s/Homepage%20banner-1-2.png?width=3840&amp;name=Homepage%20banner-1-2.png 3840w,
-    https://fivespark.com/hs-fs/hubfs/Stock%20foto%20s/Homepage%20banner-1-2.png?width=4800&amp;name=Homepage%20banner-1-2.png 4800w,
-    https://fivespark.com/hs-fs/hubfs/Stock%20foto%20s/Homepage%20banner-1-2.png?width=5760&amp;name=Homepage%20banner-1-2.png 5760w
-  "
-  sizes="(max-width: 1920px) 100vw, 1920px"
-  loading="lazy"
-/>
+ <!-- <div class="image-container">
+
+    <picture>
+ <source srcset="Consultancy gesprek-2.webp" type="image/webp">
+ <img src="Consultancy gesprek-2.webp" class="main-img" loading="lazy" alt="image 5 sparks" width="50px" height="30px">
+   </picture>
+ 
+  <div class="overlay"></div>
+</div> -->
+
+   <section id="hero" aria-label="Hero Section">
+      <div class="hero container">
+
+        <div>
+
+          <h1 class="top-page"> Fivespark is een full</h1>
+          <h1>service provider die </h1>
+          <h1 class="top-page">IT weer makkelijk maakt</h1>
+          <!-- <p>Managed Services, Software Development, Connectiviteit, Hardware en Adoptie.
+            Alles op één plek, met één aanspreekpunt. Samen werken we aan de allerbeste digitale 
+            werkplek voor jou en je collega’s.</p> -->
 
 
+        </div>
+      </div>
+    </section>
 
 <h1 class="title-page">Managed Services - Digitale Werkplek </h1>
 
@@ -28,17 +37,16 @@ ieder moment veilig en optimaal kunnen werken.</p>
   <div class="abonnement">
     <div class="gele-kader"><h3 class="soort">Standard</h3></div>
 
-    <h3>€ 9.00</h3>
+    <div class="price-area">
+        <h3>€9.00</h3>
+         <p class="per-maand-text">per gebruiker per maand</p>
+         <p class="activities-head">Activiteiten</p>
+    </div>
       
       <!-- BASIC ABONNEMENT INFO -->
       <div class="table-responsive">
         <table class="table table-primary">
-          <thead>
-            <tr>
-              <th class="activities-head" scope="col">Activiteiten</th>
-            
-            </tr>
-          </thead>
+         
 
           <tbody>
             <% contract_basic.forEach(activity => { %> <%
@@ -83,18 +91,16 @@ ieder moment veilig en optimaal kunnen werken.</p>
 
   <div class="abonnement">
     <div class="gele-kader"><h3 class="soort">Premium</h3></div>
-     <h3>€ 49.00</h3>
-     
+     <div class="price-area">
+        <h3>€49.00</h3>
+         <p class="per-maand-text">per gebruiker per maand</p>
+         <p class="activities-head">Activiteiten</p>
+    </div>
 
       <!-- PREMIUM ABONNEMENT INFO -->
       <div class="table-responsive">
         <table class="table table-primary">
-          <thead>
-            <tr>
-              <th class="activities-head" scope="col">Activiteiten</th>
-           
-            </tr>
-          </thead>
+          
           <tbody>
             <% contract_complete.forEach(activity => { %> <%
             activityTranslations.data.forEach(activityTranslation => { %> <% if
@@ -135,19 +141,16 @@ ieder moment veilig en optimaal kunnen werken.</p>
   
   <div class="abonnement">
     <div class="gele-kader"><h3 class="soort">Complete</h3></div>
-    <h3>€ 99.00</h3>
-
-      
+     <div class="price-area">
+        <h3>€99.00</h3>
+         <p class="per-maand-text">per gebruiker per maand</p>
+         <p class="activities-head">Activiteiten</p>
+    </div>
 
       <!-- COMPLETE ABONNEMENT INFO -->
 		<div class="table-responsive">
 			<table class="table table-primary">
-				<thead>
-					<tr>
-						<th class="activities-head" scope="col">Activiteiten</th>
-						
-					</tr>
-				</thead>
+				
 		<tbody>
 		  <% contract_premium.forEach(activity => { %>
 			<% activityTranslations.data.forEach(activityTranslation => { %>
@@ -183,6 +186,9 @@ ieder moment veilig en optimaal kunnen werken.</p>
  </div>
 </div>
 </section>
+
+
+
 
 
 <%- include('./partials/foot.ejs') %>
