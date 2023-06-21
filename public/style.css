@@ -19,6 +19,21 @@
   --large-screen: 1200px;
 }
 
+/* -----FONT----- */
+
+@import url("https://fonts.cdnfonts.com/css/t-star-pro");
+
+@font-face {
+  font-family: "TStarProRegular";
+  src: url("../fonts/TStarProRegular.ttf");
+  font-weight: 500;
+  font-display: swap;
+}
+
+body {
+  font-family: "TStarProRegular";
+}
+
 /* -----BANNER----- */
 
 .banner {
@@ -232,7 +247,6 @@ p {
   margin-bottom: 2em;
   /* font-weight: bold */
 }
-
 
 /* -----NAV/MENU----- */
 

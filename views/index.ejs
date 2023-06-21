@@ -15,7 +15,7 @@
   sizes="(max-width: 1920px) 100vw, 1920px"
 />
 
-<% contract_basic.forEach(activity => { %> <%
+<!-- <% contract_basic.forEach(activity => { %> <%
 activityTranslations.data.forEach(activityTranslation => { %> <% if
 (activity.activities_id === activityTranslation.id &&
 activityTranslation.languages_code === language) { %>
@@ -28,7 +28,7 @@ activityTranslation.languages_code === language) { %>
   <td>Niet inbegrepen</td>
   <% } %>
 </tr>
-<% } %> <% }) %> <% }) %>
+<% } %> <% }) %> <% }) %> -->
 
 <!-- <h2 class="title-page">Fivespark is een full service providert</h2> -->
 <!-- <% selectedContracts.forEach(contract => { %>
@@ -71,17 +71,101 @@ activityTranslation.languages_code === language) { %>
     <div class="homepage-btn">
       <button class="test-btn"><h4>Bekijk abonnement</h4></button>
       <h4>Bekijk voordelen</h4>
+
+      <!-- BASIC ABONNEMENT INFO -->
+      <div class="table-responsive">
+        <table class="table table-primary">
+          <thead>
+            <tr>
+              <th scope="col">Activiteit</th>
+              <th scope="col">---</th>
+              <th scope="col">---</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% contract_basic.forEach(activity => { %> <%
+            activityTranslations.data.forEach(activityTranslation => { %> <% if
+            (activity.activities_id === activityTranslation.activities_id &&
+            activityTranslation.languages_code === language) { %>
+            <tr>
+              <td><%- activityTranslation.title %></td>
+              <td>Tooltip</td>
+
+              <% if (activity.charged_minutes === 0) { %>
+
+              <td>
+                <img
+                  src="./Check_icon.svg"
+                  alt="rondje met vinkje er in."
+                />
+              </td>
+
+              <% } else { %>
+
+              <td>
+                <img
+                  src="./X_icon.svg"
+                  alt="rondje met kruisje er in."
+                />
+              </td>
+
+              <% } %>
+            </tr>
+            <% } %> <% }) %> <% }) %>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 
   <div class="abonnement">
     <div class="gele-kader"><h3 class="soort">Premium</h3></div>
     <h3>...</h3>
+
     <div class="homepage-btn">
       <button class="test-btn">
         <h4 class="bekijk-abonnement">Bekijk abonnement</h4>
       </button>
       <h4>Bekijk voordelen</h4>
+
+      <!-- PREMIUM ABONNEMENT INFO -->
+      <div class="table-responsive">
+        <table class="table table-primary">
+          <thead>
+            <tr>
+              <th scope="col">Activiteit</th>
+              <th scope="col">---</th>
+              <th scope="col">---</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% contract_complete.forEach(activity => { %> <%
+            activityTranslations.data.forEach(activityTranslation => { %> <% if
+            (activity.activities_id === activityTranslation.id) { %>
+            <tr class="">
+              <td><%- activityTranslation.title %></td>
+              <td>Tooltip</td>
+              <% if (activity.charged_minutes === 0) { %>
+              <td>
+                <img
+                  src="./Check_icon.svg"
+                  alt="rondje met vinkje er in."
+                />
+              </td>
+              <% } else { %>
+              <td>
+                <img
+                  src="./X_icon.svg"
+                  alt="rondje met kruisje er in."
+                />
+              </td>
+              <% } %>
+            </tr>
+            <% } %> <% }) %> <% }) %>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 
@@ -93,8 +177,46 @@ activityTranslation.languages_code === language) { %>
         <h4>Bekijk abonnement</h4>
       </button>
       <h4>Bekijk voordelen</h4>
-    </div>
-  </div>
+
+      <!-- COMPLETE ABONNEMENT INFO -->
+		<div class="table-responsive">
+			<table class="table table-primary">
+				<thead>
+					<tr>
+						<th scope="col">Activiteit</th>
+						<th scope="col">---</th>
+						<th scope="col">---</th>
+					</tr>
+				</thead>
+		<tbody>
+		  <% contract_premium.forEach(activity => { %>
+			<% activityTranslations.data.forEach(activityTranslation => { %>
+			<% if (activity.activities_id === activityTranslation.id) { %>
+				<tr class="">
+
+				<td><%- activityTranslation.title %></td>
+				<td>Tooltip</td>
+
+                                    
+				<% if (activity.charged_minutes === 0) { %>
+						<td><img src="./Check_icon.svg" alt="rondje met vinkje er in."></td>
+						<% } else { %>
+						<td><img src="./X_icon.svg" alt="rondje met kruisje er in."></td>
+
+				<% } %>
+		</tr>
+					<% } %>
+				<% }) %>
+			<% }) %>
+
+		</tbody>
+		</table>
+		</div>
+    </section>
+</div>
+ </div>
+</div>
 </section>
+
 
 <%- include('./partials/foot.ejs') %>
