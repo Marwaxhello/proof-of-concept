@@ -156,9 +156,10 @@ h3 {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 500px) {
   .title-page {
     font-size: 30px;
+    background-color: transparent;
   }
 
   h3 {
@@ -227,6 +228,7 @@ h2 {
   text-align: center;
   margin-top: 2em;
   padding: 0.3em;
+  background-color: var(--Geel);
 }
 
 h3 {
@@ -493,3 +495,5 @@ body {
 .top-page {
   margin: 0;
 }
+
+
