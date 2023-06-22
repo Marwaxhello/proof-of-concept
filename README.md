@@ -1,6 +1,6 @@
 > _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
-# FIVE SPARK🌟
+# FIVE SPARK
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
 
 <img width="1006" alt="Screenshot 2023-06-22 at 06 23 01" src="https://github.com/Marwaxhello/proof-of-concept/assets/112861555/9d046188-f211-44a7-bdc6-76cf234d9923">
