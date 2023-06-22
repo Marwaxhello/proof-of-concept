@@ -62,14 +62,15 @@ server.get("/", async (req, res) => {
   });
 });
 
-/* ---------------------------- Api call function --------------------------- */
-
 const apiInformation = {
   method: "GET",
   headers: {
     Authorization: `Bearer ${process.env.ACCESS_TOKEN}`,
   },
 };
+
+/* ---------------------------- Api call function --------------------------- */
+
 
 async function dataFetch(url) {
   const data = await fetch(url, apiInformation)
