@@ -15,15 +15,27 @@
   * [Licentie](#licentie)
 
 ## Beschrijving
-<!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+Je gaat alles wat je hebt geleerd toepassen om een opdracht voor een opdrachtgever te maken.
+
 
 ## Gebruik
-<!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
+Fivespark wil graag een dynamische frontend ontwikkelen die een overzicht per categorie biedt van servicecontracten, prijzen en de activiteiten die daarbij horen.
+
+bekijk wiki: https://github.com/Marwaxhello/proof-of-concept/wiki
 
 ## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
+
+#### TOOLS 
+
+* VSCode
+* Fimga
+
+#### GEBRUIKTE TECHNIEKEN 
+
+* EJS
+* Express
+* CSS
+* Javascript
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
