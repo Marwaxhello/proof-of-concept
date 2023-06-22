@@ -2,7 +2,8 @@
 
 # FIVE SPARK🌟
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
-<img width="702" alt="Screenshot 2023-06-22 at 06 21 29" src="https://github.com/Marwaxhello/proof-of-concept/assets/112861555/a2e81bd2-df14-4b99-9355-2f8bc1fb441a">
+
+<img width="1006" alt="Screenshot 2023-06-22 at 06 23 01" src="https://github.com/Marwaxhello/proof-of-concept/assets/112861555/9d046188-f211-44a7-bdc6-76cf234d9923">
 
 ## Inhoudsopgave
 
