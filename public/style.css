@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: "T-Star Regular";
-  /* font-display: swap; */
+  font-display: swap;
 
   src: url(./fonts/TStarProRegular.ttf);
 }
