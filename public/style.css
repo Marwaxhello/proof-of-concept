@@ -139,7 +139,6 @@ section.abonnementen {
   margin-top: -0.5em;
 }
 
-
 h3 {
   padding: 0em;
 }
@@ -490,4 +489,31 @@ body {
   margin: 0;
 }
 
+.image-container {
+  display: block;
+  width: fit-content;
+ 
+}
 
+.image-down {
+  width: 100%;
+  opacity: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* @keyframes imageFlowUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+}
+
+.image-up-animation {
+  animation: imageFlowUp 1s ease-in-out forwards;
+} */
