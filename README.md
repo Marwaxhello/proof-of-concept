@@ -32,7 +32,7 @@ bekijk wiki: https://github.com/Marwaxhello/proof-of-concept/wiki
 * 📟 HTML
 * 🎨 CSS
 * 📝JS
-* ✈️ API Fivespark
+* ✈️ API
 * 
 #### TOOLS 
 
